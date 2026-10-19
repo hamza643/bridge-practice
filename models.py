@@ -38,3 +38,12 @@ if __name__ == "__main__":
         Student.model_validate({"name": "Bad", "age": 99, "email": "bad-email"})
     except ValidationError as error:
         print(error)
+
+
+
+
+# My hand-written validation in student-records-cli took about 29 lines (four
+# validate_ functions, with try/except around every int()).
+# This pydantic model does the main checks in about 20 lines.
+# The try/except int() code is gone,
+# because pydantic converts "17" to 17 itself and raises a clear error if it can't.
