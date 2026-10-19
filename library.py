@@ -21,7 +21,6 @@ class Book(Base):
 
 engine = create_engine("sqlite:///library.db")
 
-
 def add_books() -> None:
     """Insert three books, but only if the table is still empty."""
     with Session(engine) as session:
