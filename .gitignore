@@ -1,1 +1,3 @@
-Set-Content .gitignore ".venv/", "__pycache__/", "*.db"
+.venv/
+__pycache__/
+*.db
